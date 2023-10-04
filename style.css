@@ -54,14 +54,64 @@
 }
 
 .header {
-    background-color: yellow;
+    background-color: white;
     grid-area: 1 / 2 / 2 / -1;
     display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 1fr 1fr;
+    padding: 20px;
+}
 
+.header > div {
+    border: 1px solid;
+    /* display: grid; same as flex */
+    display: flex; /* same as grid */
+}
+
+#search-bar {
+    /* grid-template-columns: auto 1fr; same as flex - but it changes after deleting an element */
+    grid-area: 1 / 1 / 2 / 6;
+    align-items: center; /* same as grid and flex*/
+}
+
+#search-bar > input {
+    flex: 1; /* same as grid */
+}
+
+#notification {
+    justify-content: center;
+    align-items: center;
+    grid-column: -4 / -1;
+    gap: 50px;
+}
+
+#notification .cowboy {
+    height: 40px;
+}
+
+.header > #welcome > img {
+    height: 60px;
+}
+
+#welcome {
+    grid-column: 1 / 6;
+    align-items: center;
+    gap: 30px;
+}
+
+#new, #upload, #share {
+    justify-content: center;
+    align-items: center;
+}
+
+.header button {
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
 }
 
 .projects {
-    background-color: green;
+    background-color: #e2e8f0;
     grid-area: 2 / 2 / -1 / -2;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -75,11 +125,13 @@ h3 {
     grid-area: 1 / 1 / 2 / -1;
 }
 
-.projects > div {
+.cards {
     border: 1px solid;
     border-radius: 10px;
     overflow: auto;
-    padding: 10px;
+    padding: 20px;
+    display: grid;
+    background-color: white;
 }
 
 .announcements {
@@ -92,21 +144,14 @@ h3 {
     grid-row: span 2;
 }
 
-.cards {
-    display: grid;
-}
-
 .symbols {
     display: flex;
-    place-self: end;
     gap: 20px;
+    place-self: end;
 }
 
-.projects img {
+.projects img,
+.header img {
     height: 25px;
-    /* display: grid; */
-    /* grid-template-columns: 1fr 1fr 1fr; */
-    /* border: 1px solid pink; */
-    /* justify-self: end; */
-    /* align-self: start; */
 }
+
