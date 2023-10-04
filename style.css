@@ -63,7 +63,7 @@
 }
 
 .header > div {
-    border: 1px solid;
+    /* border: 1px solid; */
     /* display: grid; same as flex */
     display: flex; /* same as grid */
 }
@@ -76,6 +76,7 @@
 
 #search-bar > input {
     flex: 1; /* same as grid */
+    border-radius: 50px;
 }
 
 #notification {
@@ -85,7 +86,8 @@
     gap: 50px;
 }
 
-#notification .cowboy {
+#notification .cowboy,
+.trending img {
     height: 40px;
 }
 
@@ -134,14 +136,27 @@ h3 {
     background-color: white;
 }
 
-.announcements {
-    background-color: red;
+.announcements,
+.trending {
+    background-color: #e2e8f0;
     grid-row: span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
-.trending {
+.announcement-container,
+.trending-container {
     background-color: white;
-    grid-row: span 2;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.announcements p {
+    font-size: 15px;
 }
 
 .symbols {
@@ -153,5 +168,15 @@ h3 {
 .projects img,
 .header img {
     height: 25px;
+}
+
+.trending-container > div {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 3fr;
+}
+
+.trending-container img {
+    grid-row: 1 / 3;
+    filter: invert(31%) sepia(87%) saturate(1512%) hue-rotate(177deg) brightness(96%) contrast(98%);
 }
 
