@@ -7,7 +7,7 @@
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
     grid-template-rows: repeat(5, 1fr);
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .links img,
@@ -56,19 +56,57 @@
 .header {
     background-color: yellow;
     grid-area: 1 / 2 / 2 / -1;
+    display: grid;
+
 }
 
 .projects {
     background-color: green;
     grid-area: 2 / 2 / -1 / -2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: 30px repeat(auto-fit, minmax(150px, 250px));
+    grid-auto-rows: minmax(150px, 250px);
+    gap: 20px;
+    padding: 20px;
+}
+
+h3 {
+    grid-area: 1 / 1 / 2 / -1;
+}
+
+.projects > div {
+    border: 1px solid;
+    border-radius: 10px;
+    overflow: auto;
+    padding: 10px;
 }
 
 .announcements {
     background-color: red;
-    grid-area: 2 / -2 / 4 / -1;
+    grid-row: span 2;
 }
 
 .trending {
     background-color: white;
-    grid-area: 4 / -2 / -1 / -1;
+    grid-row: span 2;
+}
+
+.cards {
+    display: grid;
+}
+
+.symbols {
+    display: flex;
+    place-self: end;
+    gap: 20px;
+}
+
+.projects img {
+    height: 25px;
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* border: 1px solid pink; */
+    /* justify-self: end; */
+    /* align-self: start; */
 }
