@@ -47,6 +47,20 @@
     font-weight: bold;
 }
 
+.links img:hover {
+    cursor: pointer;
+}
+
+.links img:hover ~ p,
+.links p:hover {
+    border-bottom: 2px solid white;
+    cursor: pointer;
+}
+
+.links img:active ~ p {
+    transform: scale(0.95);
+}
+
 .dashboard {
     background-color: #0284c7;
     padding: 40px;
@@ -74,6 +88,11 @@
     /* grid-template-columns: auto 1fr; same as flex - but it changes after deleting an element */
     grid-area: 1 / 1 / 2 / 6;
     align-items: center; /* same as grid and flex*/
+}
+
+#search-bar > img:hover {
+    transition: 1s;
+    transform: rotate(100deg);
 }
 
 #search-bar > input {
