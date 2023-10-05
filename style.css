@@ -90,7 +90,7 @@
     align-items: center; /* same as grid and flex*/
 }
 
-#search-bar > img:hover {
+#search-bar > label:hover {
     transition: 1s;
     transform: rotate(100deg);
 }
