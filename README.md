@@ -3,4 +3,4 @@
 
 [:arrow_forward: visit here](https://andrij-kolomijec.github.io/Dashboard/)
 
-topics: grid, advanced CSS
+topics: grid, advanced CSS, flexbox
