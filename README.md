@@ -1,4 +1,6 @@
 # Dashboard
-The Odin Project
+[The Odin Project](https://www.theodinproject.com/)
 
-visit here: https://andrij-kolomijec.github.io/Dashboard/
+[:arrow_forward: visit here](https://andrij-kolomijec.github.io/Dashboard/)
+
+topics: grid, advanced CSS
